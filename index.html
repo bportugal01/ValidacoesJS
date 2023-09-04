@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validações Feitas com JavaScript</title>
+    <link rel="icon" href="imagem/js.png" type="image/png">
+    <link href="css.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="container form-header">
+        <img class="form-icon"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Overwatch_circle_logo.svg/800px-Overwatch_circle_logo.svg.png"
+            alt="" />
+
+        <h1 class="form-title">Formulário de Cadastro</h1>
+        <h2 class="form-subtitle">Validações Realizadas em JavaScript</h2>
+
+
+    </header>
+    <main class="container">
+        <form name="" method="" action="" class="form-body">
+            <div>
+                <div>
+                    <label for="nome" class="form-label">Nome:</label>
+                    <input type="text" name="nome" id="nome" placeholder="Digite seu nome" oninput="limparErro('nome')"
+                        onkeypress="return blockNumbers(event.keyCode);" class="input-text">
+                </div>
+                <br>
+                <div>
+                    <label for="cep" class="form-label">CEP:</label>
+                    <input type="text" name="cep" id="cep" placeholder="Digite seu cep"
+                        onkeypress="return blockletras(event.keyCode);" oninput="limparErro('cep'); mascaraCEP(event);"
+                        class="input-text">
+                </div>
+                <br>
+                <div>
+                    <label for="endereco" class="form-label">Endereço:</label>
+                    <input type="text" name="endereco" id="endereco" placeholder="Digite seu endereço"
+                        onkeypress="return blockNumbers(event.keyCode);" oninput="limparErro('endereco')"
+                        class="input-text">
+                </div>
+                <br>
+                <div>
+                    <label for="bairro" class="form-label">Bairro:</label>
+                    <input type="text" name="bairro" id="bairro" placeholder="Digite seu bairro"
+                        onkeypress="return blockNumbers(event.keyCode);" oninput="limparErro('bairro')"
+                        class=" input-text">
+                </div>
+                <br>
+                <div>
+                    <label for="cidade" class="form-label ">Cidade:</label>
+                    <input type="text" name="cidade" id="cidade" placeholder="Digite sua cidade"
+                        onkeypress="return blockNumbers(event.keyCode);" oninput="limparErro('cidade')"
+                        class=" input-text">
+                </div>
+                <br>
+                <div>
+                    <label for="estado" class="form-label">Estado:</label>
+                    <select name="estado" id="estado" oninput="limparErro('estado')" class="input-text">
+                        <option value=" " disabled selected>Selecione o estado</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                </div>
+
+            </div>
+            <br>
+            <div>
+                <div>
+
+                    <label for="telefoneFixo" class="form-label">Telefone Fixo:</label>
+                    <input type="text" name="telefoneFixo" id="telefoneFixo" placeholder="Digite seu telefone fixo"
+                        oninput="limparErro( 'telefoneFixo');formatarTelefone2(event) "
+                        onkeypress="return blockletras(event.keyCode);" class="input-text">
+                </div>
+                <br>
+                <div>
+                    <label for="celular" class="form-label">Celular:</label>
+                    <input type="text" name="celular" id="celular" placeholder="Digite seu celular"
+                        oninput="limparErro( 'celular');formatarTelefone(event) "
+                        onkeypress="return blockletras(event.keyCode);" class="input-text">
+                </div>
+                <br>
+                <div>
+                    <label for="rg" class="form-label">RG:</label>
+                    <input type="text" name="rg" id="rg" placeholder="Digite seu RG"
+                        oninput="limparErro( 'rg');MascaraRG(this) " onkeypress="return blockletras(event.keyCode);"
+                        class="input-text ">
+                </div>
+                <br>
+                <div>
+                    <label for="cpf" class="form-label">CPF:</label>
+                    <input type="text" name="cpf" id="cpf" placeholder="Digite seu CPF"
+                        onkeypress="return blockletras(event.keyCode);" oninput="limparErro( 'cpf');MascaraCPF(this) "
+                        class="input-text ">
+                </div>
+                <br>
+                <button type="button" name="btnCadastrar" id="btnCadastrar" value="Cadastrar" onclick="validacaoForm() "
+                    class="button">Cadastrar Conta</button>
+            </div>
+
+        </form>
+    </main>
+</body>
+
+<script src="js.js"></script>
+
+</html>

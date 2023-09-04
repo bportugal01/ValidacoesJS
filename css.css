@@ -1,0 +1,183 @@
+/* Definição de variáveis de cor */
+:root {
+    --dark: #5a5a5a;
+    --beige: #ded2bf;
+    --gold: #bf995c;
+    --brown: #8b6932;
+    --white: #ffffff;
+}
+
+/* Definições de estilo base para toda a página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark);
+    font-size: 16px;
+    padding-block: 50px;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: top;
+}
+
+a {
+    color: inherit;
+}
+
+/* Definições de layout */
+.container {
+    width: min(1030px, 90%);
+    margin-inline: auto;
+}
+
+.containerlogin {
+    width: min(600px, 90%);
+    margin-inline: auto;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Definições de estilo para módulos */
+.form-icon {
+    max-width: 90px;
+    margin-bottom: 28px;
+}
+
+.form-title {
+    font-size: 22px;
+    margin: 0 auto 16px;
+}
+
+.form-subtitle {
+    font-size: 18px;
+    margin-block: 0;
+}
+
+.benefits {
+    list-style-type: none;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.benefits-item {
+    margin-bottom: 16px;
+}
+
+.benefits-icon {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.form-body {
+    background-color: var(--beige);
+    padding: 20px 15px;
+    border-radius: 8px;
+}
+
+.form-label {
+    margin-bottom: 12px;
+    display: block;
+    font-weight: bold;
+}
+
+.input-text {
+    background-color: var(--white);
+    box-sizing: border-box;
+    padding: 15px 12px;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 8px;
+    margin-bottom: 9px;
+    border: 2px solid transparent;
+    width: 100%;
+}
+
+.input-text:focus-visible,
+.input-text:focus {
+    border: 2px solid var(--brown);
+}
+
+.form-legend {
+    margin-bottom: 25px;
+}
+
+.form-footer>*:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+.form-check {
+    font-size: 14px;
+}
+
+
+
+/* Definição de estado */
+.highlighted {
+    font-weight: 600;
+}
+
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #8b6932;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #bf995c;
+}
+
+.erro {
+    color: red;
+    position: relative;
+    /* Para posicionar o ícone dentro do elemento */
+}
+
+
+/* Estilos para o ícone no botão de logout */
+.logout-button i {
+    font-size: 24px;
+}
+
+/* Media queries para estilos responsivos */
+@media screen and (min-width: 700px) {
+    .form-body {
+        display: flex;
+        gap: 60px;
+        justify-content: space-between;
+        padding: 28px 30px;
+    }
+
+    .form-body>div {
+        width: 50%;
+    }
+
+    .benefits {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        margin-top: 40px;
+    }
+
+    .benefits-item {
+        width: 33%;
+        margin-bottom: 0;
+        text-align: center;
+    }
+}
